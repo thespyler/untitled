@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question</title>
+</head>
+<body>
+<form action="/save/" method="post">{% csrf_token %}
+	Ask your silly questions here : <input type="text" name="question">
+	<input type="submit" value="Ask">
+	
+</form>
+</body>
+</html>

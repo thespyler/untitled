@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+
+</head>
+<body bgcolor="black">
+{% block content %}
+	<!-- get a fucking font -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<h1>Home Page</h1>
+
+	<a href="ask/">Ask any of your silly questions nerd</a> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSr_Vlo_SP6MyFXoyvq5yghrQEwlYo7n4Y5bg&usqp=CAU">,<br><br>
+	
+	<h3>Most Famous Questions</h3>
+		
+		<form action="give_answer/">
+
+
+		{% for question in questions %}
+			<a href="{{question.id}}/">{{question.question }}</a> <input type="submit" value="Give Answer"><br>
+
+		{% endfor %}
+		</form>
+	don't have an account <a href="signin/">sign in</a>
+{% endblock %}
+</body>
+</html>

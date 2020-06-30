@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign in</title>
+</head>
+<body>
+	<form action="/save_name/" method="post">
+		{% csrf_token%}<input type="text" name="nm">
+	<input type="submit" value="login">
+	</form>
+	Users = {% for name in users %}
+				{{ name }}
+			{% endfor %}
+</body>
+</html>
